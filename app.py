@@ -77,7 +77,8 @@ if prompt := st.chat_input("What would you like to know?"):
 # Add a clear button
 if st.button("Clear Chat"):
     st.session_state.qa_chain = None
-    st.session_state.messages = []
+    # st.session_state.messages = []
+    st.session_state["messages"] = []
 
 
 # Add some styling
