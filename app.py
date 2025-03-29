@@ -3,7 +3,10 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFaceEndpoint
+from huggingface_hub import login
 
+token = st.secrets["huggingface_token"]
+login(token=token)
 # Define the path to your saved vector store
 DB_FAISS_PATH = 'vectorstore.faiss'
 
